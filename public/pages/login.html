@@ -1,0 +1,27 @@
+<div class="jumbotron text-center">
+	<h1>Login</h1>
+	
+	<p>{{ message }}</p>
+
+
+  Email:<br>
+  <input type="text" ng-model="user.email">
+  <br>
+  Password:<br>
+  <input type="text" ng-model="user.password">
+  <br>
+  Role:<br>
+  <select name="role" ng-model="user.role"><br>
+    <option >Borrower</option>
+    <option >Lender</option>
+  </select>
+  <br><br>
+  <button ng-click="getLoginParameters()">SUBMIT</button>
+  <br><br>
+
+  <a href="#register">Register</a>
+
+
+
+
+</div>

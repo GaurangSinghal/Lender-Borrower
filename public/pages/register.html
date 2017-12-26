@@ -1,0 +1,26 @@
+<div class="jumbotron text-center">
+	<h1>Register</h1>
+	
+	<p>{{ message }}</p>
+	
+  FirstName:<br>
+  <input type="text" ng-model="user.FirstName">
+  <br>
+  LastName:<br>
+  <input type="text" ng-model="user.LastName">
+  <br>
+  Email:<br>
+  <input type="text" ng-model="user.email">
+  <br>
+  Password:<br>
+  <input type="text" ng-model="user.password">
+  <br>
+  Role:<br>
+  <select ng-model="user.role">
+    <option value="Borrower">Borrower</option>
+    <option value="Lender">Lender</option>
+  </select>
+  <br><br>
+  <button ng-click="saveUser()">Register</button>
+
+</div>

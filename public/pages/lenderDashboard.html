@@ -1,0 +1,67 @@
+<div class="jumbotron text-center">
+	<h1>Dashboard</h1>
+	
+	<p>{{ message }}</p>
+
+  <br><br>
+  <div>
+  Borrowers:<br><br>
+  <button ng-click="borrowers()">Borrowers</button>
+  <br><br>    <br><br>
+
+  <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email-ID</th>
+        </tr>
+      </thead>
+      <tbody>        
+        <tr ng-repeat="con in details">
+          <td>{{con.FirstName+" "+con.LastName}}</td>
+          <td>{{con.email}}</td>
+        </tr>
+      </tbody>
+    </table> 
+  </div>  
+  <br><br>    <br><br>
+
+  <div>
+  All Requests:<br><br>
+  <button ng-click="allRequests()">All Requests</button>
+  <br><br>  <br><br>
+
+     
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Requested By</th>
+          <th>Request Date</th>
+          <th>Amount</th>
+          <th>Repayment Status</th>
+          <th>Repayment Date</th>
+        </tr>
+      </thead>
+      <tbody>        
+        <tr ng-repeat="con in result">
+          <td>{{con.requestedBy}}</td>
+          <td>{{con.requestedAt}}</td>
+          <td>{{con.amount}}</td>     
+          <td>{{con.isRepaymentDone}}</td>
+          <td>{{con.repaymentDate}}</td>             
+          <td><button ng-click="pay(con._id)">Pay</button></td>
+        </tr>
+      </tbody>
+    </table> 
+  </div>
+
+
+      <br><br>
+  
+  <br><br>
+
+  Log Out:<br><br>
+  <button ng-click="logout()">LOG OUT</button>
+  <br><br>  <br><br>
+
+</div>

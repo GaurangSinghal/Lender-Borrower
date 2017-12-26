@@ -1,0 +1,45 @@
+<div class="jumbotron text-center">
+	<h1>Dashboard</h1>
+	
+	<p>{{ message }}</p>
+
+
+  Amount:<br>
+  <input type="text" ng-model="user.amount">
+  <br><br>
+  
+   <button ng-click="requestAmount()">Request</button>
+  <br><br>
+
+  <br><br>
+  My Requests:<br><br>
+  <button ng-click="userRequests()">My Requests</button>
+  <br><br>  <br><br>
+	
+  <table class="table">
+      <thead>
+        <tr>
+          <th>Request Date</th>
+          <th>Amount</th>
+          <th>Repayment Status</th>
+          <th>Repayment Date</th>
+        </tr>
+      </thead>
+      <tbody>        
+        <tr ng-repeat="con in requests">
+          <td>{{con.requestedAt}}</td>
+          <td>{{con.amount}}</td>     
+          <td>{{con.isRepaymentDone}}</td>
+          <td>{{con.repaymentDate}}</td>   
+        </tr>
+      </tbody>
+    </table> 
+
+
+  <br><br>
+
+  Log Out:<br><br>
+  <button ng-click="logout()">LOG OUT</button>
+  <br><br>  <br><br>
+
+</div>
