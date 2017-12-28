@@ -26,5 +26,8 @@ node server
 mongod
 ```
 
-and then  navigate to POSTMAN to check the API's.
+### To access the website, open the browser and type URL :
+```
+localhost:3000
+```
 
